@@ -1,0 +1,14 @@
+- section: one
+  text: Introductie
+
+- section: two
+  text: Aanbod
+
+- section: three
+  text: Impressie
+
+- section: four
+  text: Motivatie
+
+- section: last
+  text: Contact

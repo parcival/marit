@@ -228,13 +228,11 @@ footer {
 
 header {
     position: relative;
-    min-height: auto;
+    min-height: inherit;
     text-align: center;
     color: #fff;
     width: 100%;
-    background-color: #c9c9c9;
-    background-image: url('https://s3-eu-west-1.amazonaws.com/marit/maritverhoog/vlinders.png');
-    background-position: center;
+    background: #c9c9c9 url('/img/zetjezelfinbloeiblur.jpg') center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -479,8 +477,7 @@ fieldset[disabled] .btn-default.active {
 
 .btn.btn-primary {
     background-color: transparent;
-    border:1px solid #f0f0f0;
-    border-color:#f0f0f0;
+    border: 1px solid #f0f0f0;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;

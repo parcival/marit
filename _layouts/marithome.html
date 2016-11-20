@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Marit Verhoog</title>
+    <meta name="description" content="Marit Verhoog" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Codeply">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+    <link href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<nav id="topNav" class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar">
+                <span class="sr-only">Navigatie</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand page-scroll" href="#first"><i class="ion-ios-analytics-outline"></i> Marit Verhoog</a>
+        </div>
+        <div class="navbar-collapse collapse" id="bs-navbar">
+            <ul class="nav navbar-nav">
+                {% for menu in site.data.menu %}
+                <li>
+                    <a class="page-scroll" href="#{{ menu.section }}">{{ menu.text }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a class="page-scroll" data-toggle="modal" title="De andere coach" href="#aboutModal">Over</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<header id="first">
+    <div class="header-content">
+        <div class="inner">
+            <h1 class="cursive">Marit Verhoog</h1>
+            <h4>De vrouw achter de moeder</h4>
+            <hr>
+            <a href="#video-background" id="toggleVideo" data-toggle="collapse" class="btn btn-primary btn-xl">Video uit</a> &nbsp; <a href="#one" class="btn btn-primary btn-xl page-scroll">Naar intro</a>
+        </div>
+    </div>
+    <video autoplay="" loop="" class="fillWidth fadeIn wow collapse in" data-wow-delay="0.5s" poster="/img/zetjezelfinbloei.jpg" id="video-background">
+        <!--<source src="https://s3-us-west-2.amazonaws.com/coverr/mp4/Traffic-blurred2.mp4" type="video/mp4">-->
+        <source src="https://s3-eu-west-1.amazonaws.com/marit/maritverhoog/vlinders.mp4" type="video/mp4">Your browser does not support the video tag. I suggest you upgrade your browser
+    </video>
+</header>
+<section class="bg-primary" id="one">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 text-center">
+                <h2 class="margin-top-0 text-primary">Voor moeders die weer vrouw willen zijn</h2>
+                <br>
+                <p class="text-faded">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat sed metus nec sagittis. In justo nisi, ultricies nec erat nec, elementum laoreet nulla. Vestibulum id molestie tellus. Etiam ultrices tortor ut ipsum auctor pulvinar. Aliquam elementum dui ultricies odio dignissim, sed convallis ligula dignissim. Nam cursus facilisis est. Aliquam ullamcorper, elit a bibendum scelerisque, metus leo porttitor nisl, eu rutrum velit tellus a neque. Phasellus diam dolor, varius vitae pulvinar nec, condimentum sed neque. Phasellus dictum, est eget tincidunt consequat, quam arcu tristique urna, eget tincidunt quam nunc non ex. Suspendisse potenti. Ut ornare, diam sed tincidunt molestie, dui mauris commodo enim, accumsan pharetra elit augue congue quam. Aenean feugiat libero et odio tempor, molestie interdum tellus convallis.
+                </p>
+                <a href="#two" class="btn btn-default btn-xl page-scroll">Benieuwd hoe?</a>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="two">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="margin-top-0 text-primary"></h2>
+                <hr class="primary">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            {% for aanbod in site.aanbod %}
+            {% capture colsize %}{{ 12 | divided_by: forloop.length  }}{% endcapture %}
+            <div class="col-lg-{{ colsize }} col-md-{{ colsize }} text-center">
+                <div class="feature">
+                    <i class="icon-lg {{ aanbod.icon }} ion-female wow fadeIn" data-wow-delay=".3s"></i>
+                    <h3>{{ aanbod.title }}</h3>
+                    <p class="text-muted">{{ aanbod.content }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<section id="three" class="no-padding">
+    <div class="container-fluid">
+        <div class="row no-gutter">
+            {% for gal in site.data.gallery %}
+            <div class="col-lg-4 col-sm-6">
+                <a href="#galleryModal" class="gallery-box" data-toggle="modal" data-src="{{ gal.image }}">
+                    <img src="{{ gal.image }}" class="img-responsive" alt="{{ gal.text }}">
+                    <div class="gallery-box-caption">
+                        <div class="gallery-box-content">
+                            <div>
+                                <i class="icon-lg ion-ios-search"></i>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<section class="container-fluid" id="four">
+    <div class="row">
+        <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
+            <h2 class="text-center text-primary">De weg naar Marit Verhoog</h2>
+            {% for motivatie in site.motivatie %}
+            <hr>
+            <div class="media wow fadeInRight">
+                <h3>{{ motivatie.title }}</h3>
+                {% capture modulo %}{{ forloop.index0 | mod:2 }}{% endcapture %}
+                {% if modulo == '0' %}
+                <div class="media-left">
+                    <i class="icon-lg {{ motivatie.icon }}"></i>
+                </div>
+                {% endif %}
+                <div class="media-body media-middle">
+                    <p>{{ motivatie.content }}</p>
+                </div>
+                {% if modulo == '1' %}
+                <div class="media-right">
+                    <i class="icon-lg {{ motivatie.icon }}"></i>
+                </div>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<aside class="bg-dark">
+    <div class="container text-center">
+        <div class="call-to-action">
+            <h2 class="text-primary">Achtergrond</h2>
+            <a href="http://www.bootstrapzero.com/bootstrap-template/landing-zero" target="ext" class="btn btn-default btn-lg wow flipInX">Free Download</a>
+        </div>
+        <br>
+        <hr/>
+        <br>
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1">
+                <div class="row">
+                    <h6 class="wide-space text-center">Geïnteresseerd waar ik mijn inspiratie vandaan haal?</h6>
+                    <div class="col-sm-3 col-xs-6 text-center">
+                        <i class="icon-lg ion-social-html5-outline" title="html 5"></i>
+                    </div>
+                    <div class="col-sm-3 col-xs-6 text-center">
+                        <i class="icon-lg ion-social-sass" title="sass"></i>
+                    </div>
+                    <div class="col-sm-3 col-xs-6 text-center">
+                        <i class="icon-lg ion-social-javascript-outline" title="javascript"></i>
+                    </div>
+                    <div class="col-sm-3 col-xs-6 text-center">
+                        <i class="icon-lg ion-social-css3-outline" title="css 3"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</aside>
+<section id="last">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+                <h2 class="margin-top-0 wow fadeIn">Neem contact op</h2>
+                <hr class="primary">
+                <p>Bel of vul het formulier in en ik neem zo snel mogelijk contact op</p>
+            </div>
+            <div class="col-lg-10 col-lg-offset-1 text-center">
+                <form class="contact-form row">
+                    <div class="col-md-4">
+                        <label></label>
+                        <input type="text" class="form-control" placeholder="Naam">
+                    </div>
+                    <div class="col-md-4">
+                        <label></label>
+                        <input type="text" class="form-control" placeholder="Email">
+                    </div>
+                    <div class="col-md-4">
+                        <label></label>
+                        <input type="text" class="form-control" placeholder="Telefoon">
+                    </div>
+                    <div class="col-md-12">
+                        <label></label>
+                        <textarea class="form-control" rows="9" placeholder="Je bericht.."></textarea>
+                    </div>
+                    <div class="col-md-4 col-md-offset-4">
+                        <label></label>
+                        <button type="button" data-toggle="modal" data-target="#alertModal" class="btn btn-primary btn-block btn-lg">Verstuur <i class="ion-android-arrow-forward"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<footer id="footer">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-6 col-sm-3 column">
+                <h4>Information</h4>
+                <ul class="list-unstyled">
+                    <li><a href="">Products</a></li>
+                    <li><a href="">Services</a></li>
+                    <li><a href="">Benefits</a></li>
+                    <li><a href="">Developers</a></li>
+                </ul>
+            </div>
+            <div class="col-xs-6 col-sm-3 column">
+                <h4>About</h4>
+                <ul class="list-unstyled">
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Delivery Information</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms &amp; Conditions</a></li>
+                </ul>
+            </div>
+            <div class="col-xs-12 col-sm-3 column">
+                <h4>Blijf op de hoogte</h4>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" title="Geen spam, dat beloof ik" placeholder="Vul je email in">
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#alertModal" type="button">Schrijf je in voor updates</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-xs-12 col-sm-3 text-right">
+                <h4>Follow</h4>
+                <ul class="list-inline">
+                    <li><a rel="nofollow" href="" title="Twitter"><i class="icon-lg ion-social-twitter-outline"></i></a>&nbsp;</li>
+                    <li><a rel="nofollow" href="" title="Facebook"><i class="icon-lg ion-social-facebook-outline"></i></a>&nbsp;</li>
+                    <li><a rel="nofollow" href="" title="Dribble"><i class="icon-lg ion-social-dribbble-outline"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <br/>
+        <span class="pull-right text-muted small"><a href="http://www.caparvil.nl">by Caparvil</a> ©2016</span>
+    </div>
+</footer>
+<div id="galleryModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-body">
+                <img src="//placehold.it/1200x700/222?text=..." id="galleryImage" class="img-responsive" />
+                <p>
+                    <br/>
+                    <button class="btn btn-primary btn-lg center-block" data-dismiss="modal" aria-hidden="true">Close <i class="ion-android-close"></i></button>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="aboutModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <h2 class="text-center">Marit Verhoog</h2>
+                <h5 class="text-center">
+                    De andere coach
+                </h5>
+                <p class="text-justify">
+                    Proin in rutrum eros, non consequat enim. Duis ultricies eget felis at fermentum. Proin nec mattis odio, tempus tristique risus. Nunc volutpat facilisis tortor quis ultricies. Donec eleifend lorem felis, sed dignissim eros tempus quis. In et magna sapien. Maecenas dictum metus ut nunc vulputate consequat.
+                </p>
+                <p class="text-center"><a href="mailto:info@bloeiendouderschap.nl">Stuur een e-mail</a></p>
+                <br/>
+                <button class="btn btn-primary btn-lg center-block" data-dismiss="modal" aria-hidden="true"> OK </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="alertModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-body">
+                <h2 class="text-center">Doet het niet</h2>
+                <p class="text-center">Komt nog</p>
+                <p class="text-center">Later</p>
+                <br/>
+                <button class="btn btn-primary btn-lg center-block" data-dismiss="modal" aria-hidden="true">OK <i class="ion-android-close"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--scripts loaded here from cdn for performance -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+<script src="js/scripts.js"></script>
+</body>
+</html>
