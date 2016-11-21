@@ -1,5 +1,5 @@
 ---
-title: Voor moeders die weer vrouw willen zijn
+title: Voor moeders die meer willen ZIJN
 continue: Benieuwd hoe?
 ---
 Lorempp ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat sed metus nec sagittis. 
