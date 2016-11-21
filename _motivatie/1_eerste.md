@@ -1,5 +1,6 @@
 ---
-title: Zonder oordeel
+title: Oordeelloos
 icon: ion-ios-bolt-outline
 ---
-Donec vel dapibus sapien. Proin enim turpis, mattis quis purus sodales, placerat interdum purus. In sodales, arcu ut consectetur bibendum.
+Donec _vel_ *dapibus* sapien. Proin enim turpis, mattis quis purus sodales, 
+placerat interdum purus. In sodales, arcu ut consectetur bibendum.
