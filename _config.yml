@@ -32,3 +32,6 @@ theme: minima
 collections:
  - aanbod
  - motivatie
+ - over
+
+
